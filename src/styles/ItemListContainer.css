@@ -1,0 +1,26 @@
+
+h2{
+    font-style: italic;
+    color: #146356;
+    font-family: "Sofia", cursive;
+    text-shadow: 3px 3px 3px #ababab;
+    text-decoration: overline underline #b6452c;
+    line-height: 1.8;
+    text-align: center;
+    
+  }
+  .mensaje{
+    background-color: #FEF9E7;
+    border: none;
+    color: #7B241C ;
+    padding: 30px 50px;
+    text-align: justify;
+    text-decoration: none;
+    display: inline-block;
+    transition: all ease-in-out 1.25s;
+    border-radius: 20px;
+    font: oblique bold 70% cursive;
+    font-size: 14px;
+  }
+  
+  

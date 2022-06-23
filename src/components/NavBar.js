@@ -10,7 +10,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-warning">
             <div className="container-fluid">
             <img   className='carro' src={logo} alt='logo' />       
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarCollapse">

@@ -1,0 +1,38 @@
+.col{
+  margin-top: 15px;
+  margin-bottom: 20px;
+ 
+}
+.card-img-top {
+  height: 30vh;
+  width: 100%;
+  position: inherit; 
+  z-index: 1;
+    
+}
+.card-body {
+  background-color: #ddc5a2;  
+}
+
+.card-title {
+  color:#b6452c;
+  text-align: center;
+}
+
+.ver-mas{
+  width: 150px;
+  height: 30px;
+  background-color: #b6452c;
+  border-radius: 10px;
+
+}
+
+.cardStyle{
+  border: none;
+  margin-top: 24;
+  margin-bottom: 24;
+  background-color:#F2FEDC ; 
+}
+  
+
+  

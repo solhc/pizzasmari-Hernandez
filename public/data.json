@@ -1,0 +1,36 @@
+[
+    {"nombre": "Pizza Hawaiana",
+     "precio": 130,
+     "id": 1,
+     "descripicion": "Contiene una base de queso fundido y tomate que se aliñan con jamón y piña.",
+     "imagen":"https://i.ibb.co/tCRyWrW/pizza-haw.jpg"
+    },
+
+    {"nombre": "Pizza  Margarita",
+    "precio": 130,
+    "id": 2,
+    "descripicion": "Típica pizza napolitana elaborada con tomate, mozzarella, albahaca fresca, sal y aceite.",
+    "imagen":"https://i.ibb.co/8NGB8fS/pizza-mar.jpg"
+    },
+    {"nombre": "Pizza Argentina",
+    "precio": 140,
+    "id": 3,
+    "descripicion": "Elaborada con una base de queso fundido y tomate y chorizo argentino",
+    "imagen":"https://i.ibb.co/CHKr2Kk/pizza-arg.jpg"
+    },
+    {"nombre": "Pizza Mexicana",
+     "precio": 140, "id": 4,
+     "descripicion": "Elaborada con chile jalapeño, base de jitomate, queso fundido y chorizo ",
+     "imagen":"https://i.ibb.co/bQ5ffPt/pizza-mex.jpg"
+    },
+    {"nombre": "Pizza Pepperoni",
+     "precio": 150,
+     "id": 5,
+     "descripicion": "Típica pizza  elaborada con tomate, mozzarella, y finas rodajas de pepperoni",
+     "imagen":"https://i.ibb.co/7WXXJPS/pizza-pep.jpg"},
+    {"nombre": "Pizza Árabe",
+     "precio": 150,
+     "id": 6,
+     "descripicion": "Elaborada con tomate, mozzarella, albahaca fresca, jitomates y verduras",
+     "imagen":"https://i.ibb.co/VjGwyfJ/pizza-ara.jpg"}
+]

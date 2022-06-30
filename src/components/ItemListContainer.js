@@ -7,7 +7,7 @@ import { ItemList }  from './ItemList';
 
 
 
-function ItemListContainer(greeting){
+function ItemListContainer({bienvenida, mensaje}){
 
   const [info, setInfo] = useState([])
 
@@ -23,13 +23,11 @@ function ItemListContainer(greeting){
 
 
 
-
-
-
   return (
     <section className='contenedor'>
-      <h2>{greeting.bienvenida}</h2>
-      <p align='justify' className='mensaje'>{greeting.mensaje}</p>
+      <h2>{bienvenida}</h2>
+      <p align='justify' className='mensaje'>{mensaje}</p>
+
       <ItemCount stock={5}/> {/*Contador*/}
 
       <ItemList listadoPizzas={info} />
@@ -39,9 +37,4 @@ function ItemListContainer(greeting){
       
   )
 }
-
-
-
-
-
 export default  ItemListContainer;

@@ -10,7 +10,22 @@
 nav{
     padding-left: 15px;
     padding-right: 15px;
+    
 }
+
+.linea a:hover{
+  color: #4c3a05;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #f73b3b;
+}
+
+.notFound{
+    text-align: center;
+    color:#f73b3b;
+}
+
+
+
 
 
   

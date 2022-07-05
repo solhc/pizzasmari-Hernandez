@@ -1,34 +1,36 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
+import { useParams } from 'react-router-dom';
+import {data} from './data/data.js'
 
+const ItemDetailContainer = () => {
 
-const pizza = {
-  id: 1,
-  nombre: "Pizza Hawaiana",
-  precio: 130,
-  descripcion: "Contiene una base de queso fundido y tomate que se aliñan con jamón y piña.",
-  imagen:"https://i.ibb.co/tCRyWrW/pizza-haw.jpg"
-}
-
-const ItemDetailContainer = () =>{
-
-const [detail, setDetail] = useState({});
-
-  useEffect(() =>{
-    const getDetail = new Promise (resolve => {
+  const [product, setProduct] = useState({});
+  const [isLoading,setIsLoading] = useState(true);
+  const { itemId } = useParams();
+  
+  useEffect(() => {
+    setIsLoading(true);
+    const getItems = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(pizza);
-      }, 2000);
+        const myData = data.find((item) => item.id === itemId);
+        resolve(myData);
+      }, 1000);
     });
-    getDetail.then(res => setDetail(res));
-  }, [])
 
-  return(
+    getItems.then((res) => {
+        setProduct(res);
+        setIsLoading(false);
+    });
+ }, []);
+  
 
-    <ItemDetail detail = {detail} />
+
+    return isLoading ?
+     <h4>Procesando.... </h4> :
+      <ItemDetail product={product}  /> 
     
-  )
-
 }
+
 
 export default  ItemDetailContainer;

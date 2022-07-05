@@ -9,6 +9,10 @@ h2{
     text-align: center;
     
   }
+
+  h4{
+    color: blue;
+  }
   .mensaje{
     background-color: #FEF9E7;
     border: none;

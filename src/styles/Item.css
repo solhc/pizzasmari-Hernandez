@@ -1,7 +1,7 @@
 .col{
   margin-top: 15px;
   margin-bottom: 20px;
- 
+  
 }
 .card-img-top {
   height: 30vh;
@@ -11,12 +11,13 @@
     
 }
 .card-body {
-  background-color: #ddc5a2;  
+background-color: #ddc5a2;  
+text-align: center;
 }
 
 .card-title {
   color:#b6452c;
-  text-align: center;
+  
 }
 
 .ver-mas{
@@ -33,6 +34,9 @@
   margin-bottom: 24;
   background-color:#F2FEDC ; 
 }
-  
+
+button{
+ margin-left: auto;
+}
 
   

@@ -1,23 +1,4 @@
 .container-detail{
-   /* width: 75%;
-    height:75%;
-    margin: 20px auto;
-    background-color: #449;
-    color: #fff;
-    padding: 15px;*/
-    
-  /*height: 550px;
-  min-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: aquamarine;*/
-  /*display: grid;
-  grid-template-rows: 1fr;
-  font-family: "Raleway", sans-serif;
-  background-color: #01e37f;*/
   height: 420px;
   width: 654px;
   margin: 50px auto;
@@ -39,7 +20,7 @@
  
   img {
     border-radius: 7px;
-    height: 40vh;
+    height: 50%;
     width: 100%;
     position: inherit; 
     z-index: 1;

@@ -1,7 +1,8 @@
 import React from 'react'
 import "../styles/Item.css"
+import { Link } from 'react-router-dom'
 
-export const Item = ({ nombre, imagen, precio, id }) => {
+export const Item = ({ id, nombre, imagen, precio }) => {
 
     return (
         <div className="col">
@@ -10,7 +11,10 @@ export const Item = ({ nombre, imagen, precio, id }) => {
                 <div className="card-body">
                     <h5 className="card-title">{nombre}</h5>
                     <p className="card-title" >${precio}</p>
-                    <button className="ver-mas">Ver más</button>
+                    
+                    <Link  to={`/item/${id}`}>
+                        <button className="ver-mas">Ver más</button>
+                    </Link>
                 </div>
             </div>
         </div>

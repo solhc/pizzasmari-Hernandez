@@ -1,28 +1,41 @@
-import React from "react";
+import React, {useState} from "react";
 import '../styles/ItemDetail.css';
 import './ItemDetailContainer';
-import { useParams } from 'react-router-dom';
-import {useEffect, useState} from 'react'
+import './CartWidget';
+import ItemCount from "./ItemCount";
+import {Link} from 'react-router-dom';
 
 
 const ItemDetail = ({product}) => {
+  
+  const [goToCart, setGoToCart] = useState(false);
+  const onAdd =(cantidad) => {
+    console.log("Total de pizzas agregadas "+ cantidad)
+    setGoToCart(true);
+  } 
+
   return(
-   <div className="container-detail">
-       <div className="size-image">
-         <img  src={product.imagen} alt="pizza.."/>
-       </div>
-       <div className="product-info">
-         <div class="product-text">
-           <h1>{product.nombre}</h1><br/>        
-           <p>{product.descripcion}</p>      
-         </div>
-         <div>
-           <p className="price">${product.precio}</p>
-           <button className="boton-detalle" type="button">Agregar al carrito</button>
-         </div>
-       </div>
-     
-   </div>
+   <div className="container">
+       <div className="row">
+          <div className="col-md-6 " order-md-1>
+            <img  src={product.imagen} alt="pizza.."/>
+          </div>
+
+          <div className="col-md-6 datos" order-md-2>
+        
+            <h1 className="nombre-producto">{product.nombre}</h1><br/>        
+            <p className="descripcion-producto">{product.descripcion}</p>      
+          
+            <p className="price">${product.precio}</p>  
+            {
+              goToCart
+              ?
+            <Link to='/cart' className="btn btn-warning btn-sm boton-comprar" > Terminar compra </Link> 
+              : <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+            }         
+          </div>
+        </div>
+    </div>
   )
  }
  

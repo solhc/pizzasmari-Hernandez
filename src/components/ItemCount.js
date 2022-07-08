@@ -1,13 +1,17 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ItemCount.css"
 import Swal from 'sweetalert2'
 
-function ItemCount({stock}){
-  const [num, setNum] = useState(0);
+const ItemCount = ({initial, stock, onAdd}) => {
+  const [count, setCount] = useState (initial);
 
-  const suma = () => {
-    if(num < stock){
-      setNum(num+1)
+  const restar = () =>{
+    setCount(count-1);
+  }
+
+  const sumar = () => {
+    if(count < stock){
+      setCount(count+1)
     }
     else{
       Swal.fire({
@@ -19,35 +23,26 @@ function ItemCount({stock}){
     } 
   }
 
-  const resta = () => {
-    if(num>0){
-      setNum(num - 1)
-    }
-  }
+  useEffect (() => {
+    setCount(parseInt(initial));
+  }, [initial])
 
-  const reiniciar = () => {
-    setNum(0)
-  }
 
-  const agregarCarrito = ()  =>{
-    console.log("Agregaste", num, "pizza(s) al carrito")
-  }
 
-  return(
-    <>
-      <div className="contenedor-contador">
-        <p> { stock > 1 ? `${stock} unidades disponibles` : `${stock} unidades disponbles` } </p>
-        <p> {num} </p> 
-        <div className="botones-chicos">
-          <button  onClick={suma}> + </button> 
-          <button onClick={resta}> - </button> 
-          <button  onClick={reiniciar}> x </button> 
-        </div>
-        <button className="boton-agregar" onClick={agregarCarrito}>{ num > 0 ? `Agregar al carrito` : `Elige tu cantidad` }  </button>
+  return (
+    <div className ='contenedor-contador'>
+
+      <button className="boton-aritmetico" disabled = {count <= 1} onClick = {restar}> - </button>
+      <span>{"  " + count + "  "}</span>
+      <button  className="boton-aritmetico" onClick = {sumar}> + </button>
+      <div>
+        <button className="boton-agregar" disabled = {stock <= 0} onClick = {() => onAdd(count)}> Agregar al carrito </button>
+        
       </div>
-    </>
-  )
 
-}
+    </div>
+  );
+  }
+
 
 export default ItemCount;

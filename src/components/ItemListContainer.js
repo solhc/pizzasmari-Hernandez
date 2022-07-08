@@ -1,11 +1,9 @@
 import React from "react";
 import '../styles/ItemListContainer.css'
-import '../styles/ItemCount.css'
-/*import ItemCount from "./ItemCount";*/
 import {useEffect, useState} from 'react'
 import { ItemList }  from './ItemList';
 import { useParams } from 'react-router-dom';
-import {data} from './data/data.js'
+import {data} from './data/data.js';
 
  
 const ItemListContainer = (props) => {
@@ -15,7 +13,7 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
    setIsLoading(true);
-   const getProducs = new Promise((resolve) => {
+   const getProducts = new Promise((resolve) => {
     setTimeout(() => {
       const myData = idCategory
         ? data.filter((item) => item.categoria === idCategory)
@@ -23,7 +21,7 @@ const ItemListContainer = (props) => {
       resolve(myData);
     }, 1000);  
    });
-   getProducs
+   getProducts
     .then((res) => {
       setProduct(res);
     })
@@ -35,9 +33,7 @@ const ItemListContainer = (props) => {
     <section className='contenedor'>
        <h2>{props.bienvenida}</h2>
        <p align='justify' className='mensaje'>{props.mensaje}</p>
-
-       {/*COMPONENTE CONTADOR <ItemCount stock={5}/> Contador*/}
-
+     
       <ItemList items={product} />
     </section>   
       

@@ -4,14 +4,18 @@ import './ItemDetailContainer';
 import './CartWidget';
 import ItemCount from "./ItemCount";
 import {Link} from 'react-router-dom';
+import { useCartContext} from  '../context/CartContext'
 
 
 const ItemDetail = ({product}) => {
   
   const [goToCart, setGoToCart] = useState(false);
+  const {addProduct} = useCartContext();
+
   const onAdd =(cantidad) => {
-    console.log("Total de pizzas agregadas "+ cantidad)
+    /*console.log("Total de pizzas agregadas "+ cantidad) */
     setGoToCart(true);
+    addProduct(product, cantidad);
   } 
 
   return(

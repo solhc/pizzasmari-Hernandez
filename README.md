@@ -14,10 +14,17 @@ es la barra de opciones visible durante toda la navegación, al pasar el mouse s
    - Categorías de los tipos de pizzas: tradicionales, extranjeras y vegetarianas
    - Carrito de compras
 
+<<<<<<< HEAD
 ## PÁGINA DE INICIO 
 muestra  un mensaje de bienvenida y el catálogo de productos.
 
 ## CATEGORÍA DE LAS PRODUCTOS: 
+=======
+## PÁGINA DE INICIO
+muestra  un mensaje de bienvenida y el catálogo de productos.
+
+## CATEGORÍA DE LAS PRODUCTOS:
+>>>>>>> 1074f0f7cd5df02d2325db962050e3641ac3460d
 al seleccionar alguna categoría  se activa el Loading para presentar  los tipos de pizzas de la categoría seleccionada.
 
 ## DETALLE DE CADA PRODUCTO: 
@@ -32,7 +39,11 @@ puede acceder directamente desde el catálogo de productos o dentro de cada una 
 - React Router Dom para la navegación.
 
 ## GIF de la página
+<<<<<<< HEAD
 ![myImage](https://drive.google.com/file/d/1OQJfYM_XGQxhzWXgAlqpBWOPYEZljU-H/view?usp=sharing)
+=======
+![myImage]([https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif](https://drive.google.com/file/d/1OQJfYM_XGQxhzWXgAlqpBWOPYEZljU-H/view?usp=sharing))
+>>>>>>> 1074f0f7cd5df02d2325db962050e3641ac3460d
 
 
 

@@ -1,0 +1,29 @@
+.total-cart{
+  text-align: center;
+    max-width:500px;
+    margin:  auto;
+    color: brown;
+}
+.total-cart  p{
+  font-size: 28px;
+  font-weight: lighter;
+  color:#b6452c;
+  text-align: center;
+  font-family: 'Trocchi', serif;
+}
+
+.total-cart img{
+   
+    height: 15%;
+    width: 15%;
+    padding-bottom: 20px;
+}
+
+.total-pagar {
+    font-size: 28px;
+    font-weight: lighter;
+    color:#b6452c;
+    text-align: center;
+  font-family: 'Trocchi', serif;
+
+}

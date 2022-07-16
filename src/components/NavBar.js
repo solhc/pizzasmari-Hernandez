@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink } from 'react-router-dom'
-import logo from "../img/logo.png"
+import { NavLink } from 'react-router-dom';
+import logo from "../img/logo.png";
+
 import CartWidget from "./CartWidget";
+/*import Cart from "./Cart";*/
 
 const NavBar = () => {
     return (
@@ -21,7 +23,9 @@ const NavBar = () => {
                         <NavLink activeClassName='active' to="/category/Extranjera" className="nav-item nav-link">Extranjeras</NavLink>
                         <NavLink activeClassName='active' to="/category/Vegetariana" className="nav-item nav-link">Vegetarianas</NavLink>
                         
-                        <CartWidget/>
+                        <NavLink activeClassName='active' to="/cart" className="nav-item nav-link"><CartWidget/></NavLink>
+
+                        
                     </div>   
                 </div>
             </div>

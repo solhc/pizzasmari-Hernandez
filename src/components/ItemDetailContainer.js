@@ -1,34 +1,29 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from 'react-router-dom';
-import {data} from './data/data.js'
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+
 
 const ItemDetailContainer = () => {
 
   const [product, setProduct] = useState({});
   const [isLoading,setIsLoading] = useState(true);
+  
   const { itemId } = useParams();
   
   useEffect(() => {
-    setIsLoading(true);
-    const getItems = new Promise((resolve) => {
-      setTimeout(() => {
-        const myData = data.find((item) => item.id === itemId);
-        resolve(myData);
-      }, 1000);
-    });
+    
+    const db = getFirestore();
+    const pizzaRef = doc(db, 'product-pizza', itemId);
+    getDoc(pizzaRef).then(res => setProduct({ id:res.id, ...res.data()}))
+    setIsLoading(false);
+  }, [itemId])
 
-    getItems.then((res) => {
-        setProduct(res);
-        setIsLoading(false);
-    });
- }, []);
+
   
-
-
-    return isLoading ?
-     <h4>Procesando.... </h4> :
-      <ItemDetail product={product}  /> 
+  return isLoading ?
+  <h4>Cargando.... </h4> :
+   <ItemDetail product={product}  /> 
     
 }
 

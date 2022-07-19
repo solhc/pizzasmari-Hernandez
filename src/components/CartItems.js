@@ -4,6 +4,7 @@ import  '../styles/CartItems.css'
 
 const CartItems = ({product}) =>  {
   const { deleteProduct } = useCartContext();
+  
  
   return ( 
     <div className="cart-items">
@@ -16,12 +17,10 @@ const CartItems = ({product}) =>  {
             <div>
               <button className="btn btn-warning btn-sm" onClick={() => deleteProduct(product.id)}>Eliminar</button> 
             </div>
-          </div>
-          
+          </div>   
     </div>
+    
   );
 }
-
-
 
 export default CartItems;

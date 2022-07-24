@@ -24,6 +24,21 @@
     font-weight: lighter;
     color:#b6452c;
     text-align: center;
-  font-family: 'Trocchi', serif;
+    font-family: 'Trocchi', serif;
 
+}
+
+.boton-concluir{
+  height:40px; 
+  width:150px; 
+  margin: -20px -50px; 
+  position:relative;
+  top:50%; 
+  left:50%;
+  font-size: 15px;
+  font-weight:bold;
+  color:#f1f175;
+  border-radius: 10px;
+  border: none;
+  background-color: #b6452c;
 }

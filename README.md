@@ -23,7 +23,7 @@ Muestra  un mensaje de bienvenida y el catálogo de productos.
 Al seleccionar alguna categoría  se activa el Loading para presentar  los tipos de pizzas de la categoría seleccionada.
 
 ## Detalle de cada producto: 
-Puede acceder directamente desde el catálogo de productos o dentro de cada una de las categorías. En cualquiera de los dos casos se activa un loading para indicar que se está cargando la información.
+Puede acceder directamente desde el catálogo de productos o dentro de cada una de las categorías. En cualquiera de los dos casos se activa un loading para indicar que se está cargando la información, posteriormente se muestra el detalle de cada producto como la imagen, el precio y el link para agrgarlo al carrito.
 
 ## Carrito de compras:
 Muestra el resumen de los productos agregados con opción a eliminar alguno de estos o concluir la compra.
@@ -40,7 +40,7 @@ Cada orden registrada se almacena en la base de datos de firestore.
 - Firebase-Firestore para almacenar los productos y ordenes solicitadas.
 
 ## Gif animado de la página
- [Ver gif animado](https://drive.google.com/file/d/1IA1_Bjzu0rDA1Y2lYzlMmUhezuFnH8rD/view)
+ [Ver gif animado con el recorrido de una compra](https://drive.google.com/file/d/1IA1_Bjzu0rDA1Y2lYzlMmUhezuFnH8rD/view)
 
 
 

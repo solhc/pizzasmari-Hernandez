@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 export const Item = ({ id, nombre, imagen, precio }) => {
 
+
+
     return (
         <div className="col">
             <div className="card cardStyle">

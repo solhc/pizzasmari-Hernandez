@@ -5,19 +5,15 @@ import Modal from 'react-bootstrap/Modal';
 import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import { useCartContext} from  '../context/CartContext';
 import CartItems from "./CartItems";
-import {Link} from 'react-router-dom';
 import "../styles/cart.css"
 import carro from  "../img/carro-vacio.png";
 import { useState } from "react";
-import Swal from "sweetalert2";
-
+import { Link } from "react-router-dom";
 
 
 
 const Cart = () => {
- 
 
-/*Constantes  */
 const { clearCart } = useCartContext();
 const { cart, totalPrice } = useCartContext();
 const [ nombre, setNombre ] = useState("");
@@ -25,7 +21,6 @@ const [ telefono, setTelefono ] = useState("");
 const [ email, setEmail ] = useState("");
 const [ datos, setDatos ] = useState(false);
 const [ idOrden, setIdOrden ] = useState("0");
-
 
 const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
@@ -49,7 +44,8 @@ const terminarCompra = () =>{
         addDoc(collection(db, "orders"), datosCompra)
         
        .then((doc) =>setIdOrden(doc.id))
-       alert (`Cofirmacion de compra, numero de pedido: ${idOrden}` )
+      
+
       } catch (e) {
         console.error("Error al agregar el documento ", e);
       }
@@ -58,11 +54,22 @@ const terminarCompra = () =>{
     setDatos(!datos);
 }
 
-   
-    console.log("orden...",idOrden)
-    
- 
-  
+/* Envió mensaje de confirmación de compra y número de orden*/
+if (idOrden !== 0 && datos) { 
+  return (
+      
+          <div className="confirmacion">
+              <p>Gracias por su compra!!</p>
+              <h3>Su número de orden es:  </h3>
+              <p className="numpedido">{idOrden}</p>
+              <br/>
+              <Link to='/' className="btn btn-warning btn-sm " > Regresar</Link> 
+          </div>
+      
+  )
+} 
+
+/*Verifica que el carrito no este vacio y muestra un link para hacer compras*/  
   if (cart.length === 0) {
       return (
         <div className="total-cart">
@@ -75,19 +82,7 @@ const terminarCompra = () =>{
 
       );
   }
-  else if (idOrden && datos) { 
-    return (
-        <main className="checkOut">
-            <div className="checkOutDiv">
-                
-                <h3 className="orden">Tu número de orden es: <span className="ordenNum">{idOrden}</span></h3>
-                <Link to='/' className="btn btn-warning btn-sm boton-comprar" > Regresar</Link> 
-            </div>
-        </main>
-        
-    )
-   
-  }
+  
  
 
 

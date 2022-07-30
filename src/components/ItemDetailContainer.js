@@ -21,10 +21,14 @@ const ItemDetailContainer = () => {
 
 
   
-  return isLoading ?
-  <h4>Cargando.... </h4> :
-   <ItemDetail product={product}  /> 
+  return (
+    <div>
+      {isLoading  && <p algin="center"><h4 >Cargando.... </h4></p> }
     
+    <ItemDetail product={product}  /> 
+    </div>
+  )
+
 }
 
 

@@ -13,7 +13,6 @@ const ItemDetail = ({product}) => {
   const {addProduct} = useCartContext();
 
   const onAdd =(cantidad) => {
-    /*console.log("Total de pizzas agregadas "+ cantidad) */
     setGoToCart(true);
     addProduct(product, cantidad);
   } 
